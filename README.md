@@ -42,5 +42,5 @@ Run the `./update-url-map` script to fetch new image releases.
 
 | Name | Description |
 |------|-------------|
-| ami | NixOS AMI on AWS |
+| id | NixOS AMI on AWS |
 <!-- terraform-docs-end -->

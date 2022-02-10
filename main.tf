@@ -22,13 +22,13 @@ data "aws_region" "current" {}
 
 locals {
   key = "${var.release}.${coalesce(var.region, data.aws_region.current.name)}.${var.type}"
-  ami = var.url_map[local.key]
+  ami_id = var.url_map[local.key]
 }
 
 # ---
 
-output "ami" {
-  description = "NixOS AMI on AWS"
-  value       = local.ami
+output "id" {
+  description = "NixOS AMI ID on AWS"
+  value       = local.ami_id
 }
 
